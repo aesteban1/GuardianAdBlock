@@ -1,0 +1,265 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/* ---------------------------------===============MY CODE==============------------------------------------------*/ 
+:root{
+  --circle-path:"M3.21796 70C3.21796 46.1411 15.9465 24.0945 36.609 12.1651C57.2714 0.235603 82.7286 0.235601 103.391 12.1651C124.053 24.0945 136.782 46.1411 136.782 70C136.782 93.8589 124.053 115.905 103.391 127.835C82.7286 139.764 57.2714 139.764 36.609 127.835C15.9466 115.905 3.21796 93.8589 3.21796 70Z";
+  --shield-path:"M2.65893 21.8403L70 2.60004L137.323 21.8351L128.26 121.523C127.84 126.146 125.601 130.412 122.035 133.383L71.5741 175.434C70.6529 176.202 69.3163 176.207 68.3889 175.447L17.1477 133.446C13.4777 130.438 11.1867 126.068 10.7997 121.339L2.65893 21.8403Z";
+  --green: #03F5A4;
+  --lighter-gray: #777777;
+  --light-gray:#444444;
+  --dark-gray:#222222;
+  --black:#000000;
+  --white:#FFFFFF;
+  --red:#FF0000;
+  --lava:#f54417;
+}
+
+html{
+    box-sizing: border-box;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+html, body, #root{
+    height: 100%;
+    min-height:100%;
+    width:auto;
+    min-width: 320px;
+}
+
+body, .popup{
+  background-color: var(--black);
+  /* margin: 0; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+}
+
+#root .popup{
+    /* height: 100%; */
+    /* min-height: 600px; */
+    background-image: url('images/Triangle-Carbon-Fiber.jpg');
+    background-size:200%;
+    background-position: cover;
+    overflow: hidden;
+    display: flex;
+}
+
+section{
+    color: var(--white);
+    width: 100%;
+}
+
+.g-Container{
+    display: flex;
+    min-width: 100%;
+}
+
+.Header-Container,
+.Footer-Container{
+    align-items: center;
+    justify-content: space-between;   
+}
+
+.Block-Container{
+    justify-content: center;
+}
+
+.button-Container{
+    justify-content: center;
+    padding: 10px 0px;
+}
+
+.button-Container Button{
+    padding: 5px;
+}
+
+#AdBlock{
+    border-top-right-radius:0px;
+    border-bottom-right-radius: 0px;
+    border-right: none;
+}
+
+#Analytics{
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-left: none;
+}
+.Toggled{
+    box-shadow: inset 1px 1px 2px var(--dark-gray), 
+                inset 0px -1px 2px var(--dark-gray);
+}
+
+.Untoggled{
+    box-shadow: none;
+}
+
+.Header-Content,
+.Footer-Content{
+    padding: 5px;
+    font-size: 1em;
+    width: auto;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a svg{
+    width: 20px;
+    height: 20px;
+}
+
+a svg:hover{
+opacity: 0.8;
+}
+
+svg#icon{
+    width: 30px;
+    height: 30px;
+    opacity: 0.8;
+    cursor: pointer;
+}
+svg#icon:hover{
+    opacity: 0.9;
+}
+
+#logo{
+    background-color: transparent;
+    stroke: black;
+    fill: url(#Gradient1);
+    align-items: center;
+}
+
+#logo path{
+    cursor: pointer;
+    stroke: var(--lighter-gray);
+}
+
+.logo-Button{
+    padding: 20px 0px;
+}
+
+.Menu-Container{
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.Menu-Container button:hover{
+    opacity: 1;
+
+}
+
+.Menu-Container button{
+    background-color: var(--light-gray);
+    opacity: 0.9;
+    border: none;
+    padding: 5px;
+    width: 100%;
+    color: var(--white);
+    cursor: pointer;
+}
+
+/*------------DUMMY CODE------------*/
