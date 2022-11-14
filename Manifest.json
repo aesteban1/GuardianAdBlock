@@ -1,0 +1,15 @@
+{
+"name": "Guardian-AdBlock",
+"version": "1.0",
+"description": "Open source non profit ad-block that does not give away data to other compaines.",
+"permissions": ["webRequestBlocking","webRequest", "http://*/",
+"https://*/"],
+"background": {
+    "scripts": ["blocked_domains.js", "background.js"]
+
+},
+"browser_action": { 
+"default_popup": "popup.html"
+},
+"manifest_version": 2
+}
